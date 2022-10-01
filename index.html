@@ -109,8 +109,11 @@
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="subscribe-field" type="email" name="subscribe-email" placeholder="Ваш e-mail">
-          <button class="subscribe-button" type="submit">Подписаться</button>
+          <label class="subscribe-form-label" for="subscribe-form-field-email">Ваш e-mail</label>
+          <!--в дальнейшем label скроем-->
+          <input class="subscribe-form-field" type="email" name="subscribe-form-email" placeholder="Ваш e-mail"
+            id="subscribe-form-field-email">
+          <button class="subscribe-form-button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
