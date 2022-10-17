@@ -1,0 +1,365 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  background-color: #F2F2F2;
+}
+
+.button {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #82B3D3;
+}
+
+/*ГЛАВНАЯ СТРАНИЦА*/
+/*ШАПКА*/
+.page-header {
+  font-weight: 700;
+  background-color: #ffffff;
+}
+
+/*НАВИГАЦИЯ*/
+.navigation a {
+  text-align: center;
+}
+
+/*Ссылки на страницы сайта*/
+.navigation-link {
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.navigation-user-list {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/*Ссылки для пользователя*/
+.navigation-user-link {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/*сылка-кнопка выбора*/
+.navigation-user-button {
+  background-color: #756157;
+}
+
+/*ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ*/
+.main-index {
+  background-color: #ffffff;
+}
+
+/*Приветственный блок*/
+.hero {
+  background-image: url("../images/welcome-background.jpg");
+  background-color: #000000;
+  color: #ffffff;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+/*Основной заголовок главной страницы*/
+.hero-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.hero-reasons {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+/*ПРЕИМУЩЕСТВА*/
+.advantages-item,
+.advantages-user-item {
+  background-color: #82B3D3;
+  text-align: center;
+}
+
+/*Заголовки*/
+.advantages-title,
+.advantages-user-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.image-item {
+  color: #ffffff;
+}
+
+.image-item h3 {
+  color: #ffffff;
+}
+
+.item-opacity0-12 {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.item-opacity0-20 {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.item-white {
+  background-color: #ffffff;
+}
+
+/*ПОИСК*/
+.search {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+/*Заголовок*/
+.search-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/*Ссылка-кнопка поиска*/
+.button-search {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #756157;
+}
+
+/*ПОДПИСКА*/
+.subscribe-background-image {
+  background-color: #000000;
+  color: #ffffff;
+  background-image: url("../images/subscription-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+/*Заголовок*/
+.subscribe-title-background-image {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.subscribe-description {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+/*Поле ввода*/
+.subscribe-form-field {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #F2F2F2;
+}
+
+/*Кнопка подписки*/
+.subscribe-form-button {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+/*ПОДВАЛ*/
+.page-footer {
+  background-color: #ffffff;
+}
+
+/*КОНТАКТЫ*/
+.footer-contacts a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/*Ссылка на телефон*/
+.footer-contacts-phone-link {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*СТРАНИЦА КАТАЛОГА*/
+/*ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ*/
+.main-inner {
+  background-color: #ffffff;
+}
+
+/*ФИЛЬТРЫ*/
+.filter-content {
+  color: #ffffff;
+  background-color: #000000;
+  background-image: url("../images/catalog-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+/*Основной заголовок страницы каталога*/
+.filter-content-header-title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+/*Хлебные крошки*/
+.filter-content-header-breadcrumbs-link {
+  color: inherit;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/*Группы фильтров*/
+.filter-content-filter-group-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.filter-content-filter-group-list {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+/*Кнопка "Сбросить"*/
+.filter-content-filter-button-reset {
+  background-color: transparent;
+}
+
+/*КАТАЛОГ*/
+.catalog-result {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+/*Кнопки сортировки*/
+.catalog-appearance-button {
+  color: #000000;
+  text-decoration: none;
+}
+
+/*Карточки товара*/
+.catalog-product-card-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.catalog-product-card-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.catalog-product-card-price {
+  font-weight: 400;
+  text-align: right;
+}
+
+/*Ссылка-кнопка "Подробнее"*/
+.button-more-info {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #756157;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.catalog-product-card-rating {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #F2F2F2;
+}
+
+.button-active {
+  background-color: #7DB54F;
+}
+
+/*ПАГИНАЦИЯ*/
+.catalog-pagination-link {
+  background-color: #82B3D3;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/*Активная страница*/
+.catalog-pagination-current {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+/*...*/
+.catalog-pagination-link-next {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/*ПОДПИСКА*/
+.subscribe-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+  text-transform: uppercase;
+}
