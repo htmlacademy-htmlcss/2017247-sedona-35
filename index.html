@@ -11,14 +11,18 @@
 
   <body>
 
+    <!--ШАПКА ГЛАВНОЙ СТРАНИЦЫ-->
     <header class="page-header" data-test="header">
 
+      <!--Логотип сайта-->
       <a class="logo-link">
         <img class="logo" src="images/logo/logo.svg" width="140" height="70" alt="Логотип город Седона">
       </a>
 
+      <!--НАВИГАЦИЯ-->
       <nav class="navigation">
 
+        <!--Меню сайта-->
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link navigation-link-current">Главная</a>
@@ -31,6 +35,7 @@
           </li>
         </ul>
 
+        <!--Меню пользователя-->
         <ul class="navigation-user-list">
           <li class="navigation-user-item">
             <a class="navigation-user-link" href="#">
@@ -51,8 +56,10 @@
 
     </header>
 
+    <!--ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ-->
     <main class="main-index" data-test="main">
 
+      <!--Приветственный блок-->
       <div class="hero" data-test="hero">
         <img class="hero-image" src="images/welcome.svg" width="458" height="352"
           alt="Добро пожаловать в великолепную Седону">
@@ -62,6 +69,7 @@
 
       <p class="hero-reasons">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
 
+      <!--СПИСКИ ПРЕИМУЩЕСТВ-->
       <section class="advantages" data-test="advantages">
 
         <h2 class="visually-hidden">Преимущества</h2>
@@ -110,6 +118,7 @@
 
       </section>
 
+      <!--ПОИСК-->
       <section class="search" data-test="search">
 
         <h2 class="search-title">Заинтересовались?</h2>
@@ -120,12 +129,15 @@
 
       </section>
 
-      <section class="subscribe subscribe-bakground" data-test="subscribe">
+      <!--ПОДПИСКА-->
+      <section class="subscribe-background-image" data-test="subscribe">
 
-        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+        <h2 class="subscribe-title-background-image">Подпишитесь на рассылку</h2>
 
-        <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <p class="subscribe-description">Только полезная информация и никакого спама, честное
+          бойскаутское!</p>
 
+        <!--Форма подписки-->
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
 
           <label class="subscribe-form-label" for="subscribe-form-field-email">Ваш e-mail</label>
@@ -140,12 +152,15 @@
 
     </main>
 
+    <!--ПОДВАЛ ГЛАВНОЙ СТРАНИЦЫ-->
     <footer class="page-footer" data-test="footer">
 
+      <!--Контакты-->
       <section class="footer-contacts">
 
         <h2 class="visually-hidden">Контакты</h2>
 
+        <!--Ссылки на социальные сети-->
         <ul class="footer-contacts-social-list">
           <li class="footer-contacts-social-item">
             <a class="social-vk-link" href="https://vk.com/htmlacademy">
@@ -164,8 +179,10 @@
           </li>
         </ul>
 
+        <!--Ссылка на телефон-->
         <a class="footer-contacts-phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
 
+        <!--Логотип-ссылка на другой сайт-->
         <a class="footer-contacts-logo-htmlacademy-link" href="https://htmlacademy.ru">
           <img class="logo" src="images/logo/logo-html-academy.svg" width="115" height="34" alt="Логотип HTML Academy">
         </a>
