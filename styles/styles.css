@@ -34,6 +34,17 @@ body {
   background-color: #F2F2F2;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -63,18 +74,21 @@ body {
   background-color: #ffffff;
 }
 
-.logo-link {
-  width: 138px;
+.logo {
+  display: block;
 }
 
 /*НАВИГАЦИЯ*/
 .navigation {
   display: flex;
   width: 892px;
+  margin-left: 30px;
 }
 
 .navigation-list,
 .navigation-user-list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -82,21 +96,27 @@ body {
 
 .navigation-list {
   width: 456px;
-  margin-left: 30px;
+  margin-right: auto;
 }
 
 .navigation-user-list {
-  width: 312px;
-  margin-left: auto;
+  max-width: 312px;
 }
 
 .navigation-link,
 .navigation-user-link {
+  display: block;
   font-size: 20px;
   line-height: 24px;
   color: #000000;
   text-decoration: none;
   text-transform: capitalize;
+  padding: 20px 16px;
+}
+
+.navigation-user-link {
+  min-width: 20px;
+  min-height: 20px;
 }
 
 .quantity-value {
@@ -116,6 +136,8 @@ body {
   background-color: #756157;
   text-align: center;
   text-transform: uppercase;
+  margin: 14px 0 14px 20px;
+  padding: 8px 34px
 }
 
 /*ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ*/
@@ -126,14 +148,18 @@ body {
 }
 
 /*Приветственный блок*/
-.hero {
+.hero-background-image {
   background-image: url("../images/welcome-background.jpg");
   background-color: #000000;
-  color: #ffffff;
+  color: #a9a7a5;
   background-size: 100% auto;
   background-repeat: no-repeat;
   text-align: center;
-  margin-bottom: 69px;
+  padding-top: 51px;
+}
+
+.hero {
+  padding: 69px 272px 90px;
 }
 
 /*Основной заголовок главной страницы*/
@@ -146,23 +172,16 @@ body {
   color: #000000;
   margin-top: 0;
   margin-bottom: 25px;
-  padding: 0 286px;
 }
 
 .hero-reasons {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 90px;
-  padding: 0 272px;
+  margin: 0;
 }
 
 /*ПРЕИМУЩЕСТВА*/
-.advantages {
-  margin-bottom: 96px;
-}
-
 .advantages-list,
 .advantages-user-list {
   margin: 0;
@@ -217,10 +236,14 @@ body {
 }
 
 .image-item {
+  display: flex;
   color: #ffffff;
   width: 100%;
-  display: flex;
   padding: 0;
+}
+
+.advantages-item:nth-child(5) .advantages-image {
+  order: -1;
 }
 
 .image-item h3 {
@@ -240,8 +263,7 @@ body {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
-  padding: 0 304px;
-  margin-bottom: 96px;
+  padding: 96px 304px;
 }
 
 /*Заголовок*/
@@ -323,16 +345,19 @@ body {
 /*ПОДВАЛ*/
 .page-footer {
   background-color: #ffffff;
-  padding: 35px 70px;
+  padding: 40px 70px 30px;
 }
 
 /*КОНТАКТЫ*/
 .footer-contacts {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .footer-contacts-social-list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -344,18 +369,23 @@ body {
   text-decoration: none;
 }
 
+.footer-contacts-social-item a {
+  display: block;
+  width: 48px;
+  height: 40px;
+}
+
 /*Ссылка на телефон*/
 .footer-contacts-phone-link {
   font-size: 40px;
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
-  width: 720px;
-  margin-right: auto;
+  padding: 5px 192px;
 }
 
-.footer-contacts-logo-htmlacademy-link {
-  width: 115px;
+.logo-htmlacademy {
+  display: block;
 }
 
 /*СТРАНИЦА КАТАЛОГА*/
@@ -369,6 +399,10 @@ body {
   padding: 35px 70px 70px;
 }
 
+.filter-content-header {
+  margin-bottom: 40px;
+}
+
 /*Основной заголовок страницы каталога*/
 .filter-content-header-title {
   font-weight: 700;
@@ -380,6 +414,7 @@ body {
 
 /*Хлебные крошки*/
 .filter-content-header-breadcrumbs-list {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -389,6 +424,7 @@ body {
   color: inherit;
   font-size: 16px;
   text-decoration: none;
+  margin-right: 28px;
 }
 
 /*Группы фильтров*/
@@ -403,6 +439,9 @@ body {
 .filter-content-filter-group-list {
   font-size: 18px;
   line-height: 23px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 /*Кнопка "Сбросить"*/
@@ -414,11 +453,14 @@ body {
 .catalog {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 50px 70px 60px;
 }
 
+/*Сортировка*/
 .sorting-wrapper {
-  width: 1060px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .catalog-result {
@@ -427,20 +469,42 @@ body {
   line-height: 36px;
   color: #000000;
   text-transform: uppercase;
+  margin: 0;
+}
+
+.catalog-select-control {
+  width: 292px;
+  height: 49px;
+  margin-left: auto;
+  margin-right: 70px;
 }
 
 /*Кнопки сортировки*/
-.catalog-appearance-button {
+.catalog-appearance-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.catalog-appearance-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.catalog-appearance-link-button {
+  display: block;
+  width: 48px;
+  height: 48px;
   color: #000000;
   text-decoration: none;
 }
 
 /*Карточки товара*/
 .catalog-product-list {
-  width: 1060px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  margin-bottom: 40px;
 }
 
 .catalog-product-card-link {
@@ -452,6 +516,11 @@ body {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
+  margin: 0;
+}
+
+.catalog-product-card-description {
+  margin: 0;
 }
 
 .catalog-product-card-price {
@@ -470,12 +539,17 @@ body {
   text-transform: uppercase;
 }
 
+.catalog-product-card-grade {
+  margin: 0;
+}
+
 .catalog-product-card-rating {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
   background-color: #F2F2F2;
+  margin: 0;
 }
 
 .button-active {
@@ -484,13 +558,22 @@ body {
 
 /*ПАГИНАЦИЯ*/
 .catalog-pagination-list {
-  width: 1060px;
-  margin: 0;
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 0;
   padding: 0;
   list-style-type: none;
 }
 
+.catalog-pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .catalog-pagination-link {
+  display: block;
+  width: 60px;
+  height: 60px;
+  padding: 11px 18px;
   background-color: #82B3D3;
   color: #ffffff;
   font-weight: 700;
