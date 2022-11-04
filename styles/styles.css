@@ -149,13 +149,20 @@ body {
 
 /*Приветственный блок*/
 .hero-background-image {
-  background-image: url("../images/welcome-background.jpg");
   background-color: #000000;
-  color: #a9a7a5;
-  background-size: 100% auto;
+  color: #ffffff;
+  background-image: url("../images/welcome-background.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
-  text-align: center;
+  background-position: center;
+  min-height: 485px;
   padding-top: 51px;
+}
+
+.hero-image {
+  display: block;
+  margin: 0 auto 25px;
+  color: #a9a7a5;
 }
 
 .hero {
@@ -246,6 +253,12 @@ body {
   order: -1;
 }
 
+.advantages-image {
+  height: auto;
+  width: 800px;
+  object-fit: cover;
+}
+
 .image-item h3 {
   color: #ffffff;
 }
@@ -302,8 +315,10 @@ body {
   background-color: #000000;
   color: #ffffff;
   background-image: url("../images/subscription-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  min-height: 415px;
   text-align: center;
   padding: 96px 258px 104px;
 }
@@ -391,11 +406,12 @@ body {
 /*СТРАНИЦА КАТАЛОГА*/
 /*ФИЛЬТРЫ*/
 .filter-content {
-  color: #ffffff;
   background-color: #000000;
+  color: #ffffff;
   background-image: url("../images/catalog-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
+  min-height: 412px;
   padding: 35px 70px 70px;
 }
 
@@ -415,6 +431,7 @@ body {
 /*Хлебные крошки*/
 .filter-content-header-breadcrumbs-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -472,6 +489,7 @@ body {
   margin: 0;
 }
 
+/* Сортировка */
 .catalog-select-control {
   width: 292px;
   height: 49px;
@@ -479,7 +497,7 @@ body {
   margin-right: 70px;
 }
 
-/*Кнопки сортировки*/
+/*Кнопки-ссылки переключения вида*/
 .catalog-appearance-list {
   display: flex;
   margin: 0;
@@ -501,15 +519,36 @@ body {
 
 /*Карточки товара*/
 .catalog-product-list {
-  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
+  margin-top: 0;
+  margin-bottom: 40px;
   padding: 0;
   list-style-type: none;
-  margin-bottom: 40px;
+}
+
+.catalog-product-card-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+}
+
+.link-image {
+  order: -1;
 }
 
 .catalog-product-card-link {
   text-decoration: none;
   color: #000000;
+}
+
+.link-title,
+.link-image {
+  margin-bottom: 16px;
 }
 
 .catalog-product-card-title {
@@ -519,6 +558,19 @@ body {
   margin: 0;
 }
 
+.catalog-product-card-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.product-card-description-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
 .catalog-product-card-description {
   margin: 0;
 }
@@ -526,10 +578,18 @@ body {
 .catalog-product-card-price {
   font-weight: 400;
   text-align: right;
+  min-width: 140px;
+}
+
+.buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
 }
 
 /*Ссылка-кнопка "Подробнее"*/
-.button-more-info {
+.link-button-more-info {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -537,10 +597,24 @@ body {
   background-color: #756157;
   text-align: center;
   text-transform: uppercase;
+  padding: 8px 26px;
+  margin-right: 20px;
+}
+
+.catalog-product-card-button {
+  width: 140px;
+  padding: 8px 0;
+  flex-shrink: 0;
+}
+
+.rating-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .catalog-product-card-grade {
   margin: 0;
+  align-self: center;
 }
 
 .catalog-product-card-rating {
@@ -549,6 +623,8 @@ body {
   text-align: center;
   text-transform: uppercase;
   background-color: #F2F2F2;
+  width: 140px;
+  padding: 9px 0 8px;
   margin: 0;
 }
 
