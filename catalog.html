@@ -181,18 +181,25 @@
             <p class="catalog-result">Найдено гостиниц: <span class="result-value">38</span></p>
 
             <!--Сортировка-->
-            <select class="catalog-select-control" aria-label="Сортировка.">
-              <option class="catalog-select-option" value="cheap">Сначала дешевые</option>
-              <option class="catalog-select-option" value="expensive">Сначала дорогие</option>
-              <option class="catalog-select-option" value="popular">Сначала популярные</option>
-            </select>
+            <div class="select-wrapper">
+              <select class="catalog-select-control" aria-label="Сортировка.">
+                <option class="catalog-select-option" value="cheap">Сначала дешевые</option>
+                <option class="catalog-select-option" value="expensive">Сначала дорогие</option>
+                <option class="catalog-select-option" value="popular">Сначала популярные</option>
+              </select>
+              <svg class="select-icon" width="12" height="9" viewBox="0 0 12 9" fill="currentcolor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m6.675 7.713 5.1-5.3c.3-.3.3-.9 0-1.2-.3-.3-.9-.3-1.2 0l-4.5 4.7-4.5-4.7c-.3-.3-.9-.3-1.2 0-.2.1-.3.4-.3.6 0 .2.1.4.3.6l5.1 5.3c.3.4.9.4 1.2 0Z" />
+              </svg>
+            </div>
 
             <!--Кнопки-ссылки переключения вида-->
             <ul class="catalog-appearance-list">
               <li class="catalog-appearance-item">
-                <a class="catalog-appearance-link-button catalog-appearance-link-button-current button-table" href="#">
-                  <svg class="icon-tile" aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a class="catalog-appearance-link-button catalog-appearance-link-button-current">
+                  <svg class="catalog-appearance-icon" aria-hidden="true" focusable="false" width="16" height="14"
+                    viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z"
                       fill="#000" />
                   </svg>
@@ -200,8 +207,8 @@
                 </a>
               </li>
               <li class="catalog-appearance-item">
-                <a class="catalog-appearance-link-button button-slideshow" href="#">
-                  <svg class="icon-slideshow" aria-hidden="true" focusable="false" width="16" height="14"
+                <a class="catalog-appearance-link-button" href="#">
+                  <svg class="catalog-appearance-icon" aria-hidden="true" focusable="false" width="16" height="14"
                     viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z" fill="#000" />
                   </svg>
@@ -209,9 +216,9 @@
                 </a>
               </li>
               <li class="catalog-appearance-item">
-                <a class="catalog-appearance-link-button button-list" href="#">
-                  <svg class="icon-list" aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a class="catalog-appearance-link-button" href="#">
+                  <svg class="catalog-appearance-icon" aria-hidden="true" focusable="false" width="16" height="14"
+                    viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z"
                       fill="#000" />
@@ -342,7 +349,7 @@
               </a>
             </li>
             <li class="catalog-pagination-item">
-              <a class="catalog-pagination-link" title="Последняя страница">10</a>
+              <a class="catalog-pagination-link" title="Последняя страница" href="#">10</a>
             </li>
           </ul>
 
